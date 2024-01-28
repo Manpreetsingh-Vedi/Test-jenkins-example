@@ -5,7 +5,7 @@ pipeline {
 
             steps {
                 withMaven(maven : '4.0.0-alpha-8') {
-                    Bat 'mvn install | mvn compile'
+                    bat 'mvn clean install'
                 }
             }
         }
@@ -13,7 +13,7 @@ pipeline {
 
             steps {
                 withMaven(maven : '4.0.0-alpha-8') {
-                    Bat 'mvn test'
+                    bat 'mvn test'
                 }
             }
         }
@@ -21,6 +21,6 @@ pipeline {
         stage ('Deployment Stage') {
             steps {
                 withMaven(maven : '4.0.0-alpha-8') {
-                    Bat 'mvn deploy'
+                    bat 'mvn deploy'
                 }
             }
