@@ -5,8 +5,8 @@ pipeline {
         stage ('Compile Stage') {
 
             steps {
-                withMaven(maven : '4.0.0-alpha-8') {
-                    sh 'mvn clean compile'
+                withMaven(MVN_HOME : '4.0.0-alpha-8') {
+                    mvn clean compile
                 }
             }
         }
