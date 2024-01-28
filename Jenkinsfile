@@ -5,11 +5,14 @@ pipeline {
         stage ('Compile Stage') {
 
             steps {
-                withMaven(MVN_HOME : '4.0.0-alpha-8') {
-                    mvn clean compile
+                echo "Compile stage"
                 }
             }
-        }
+        stage ('Compile Stage') {
 
+            steps {
+                echo "Compile stage"
+                }
+        }  
     }
 }
