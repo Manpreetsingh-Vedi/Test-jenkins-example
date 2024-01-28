@@ -5,7 +5,7 @@ pipeline {
 
             steps {
                 withMaven(maven : '4.0.0-alpha-8') {
-                    Bat '"C:\Program Files\apache-maven-4.0.0-alpha-8\bin" clean compile'
+                    Bat 'mvn install | mvn compile'
                 }
             }
         }
